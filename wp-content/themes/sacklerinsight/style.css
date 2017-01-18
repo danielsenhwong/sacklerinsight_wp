@@ -1,0 +1,125 @@
+/*
+ * Theme Name: Sackler InSight
+ * Author: Daniel Wong
+ * Description: A custom theme for the InSight, the Tufts Sackler School
+ *     Graduate Student Council newsletter.
+ * Version: 0.0.1
+ */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+div.content {
+    display: table;
+}
+
+div.main,
+div.sidebar {
+    display: table-cell;
+}
+
+div.header-left {
+    margin: 0 15px 0 0;
+    display: inline-block;
+    font-size: 460%;
+}
+
+div.header-right {
+    margin: 0;
+    display: inline-block;
+    font-size: 100%;
+}
+
+div.content {
+    display: table;
+}
+
+div.nav li {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    margin: 0;
+}
+
+div.nav li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+div.nav li.page_item_has_children:hover .children {
+    display: block;
+    background-color: #CCCCCC;
+    z-index: 99;
+}
+
+ul.children {
+    position: absolute;
+    display: none;
+    margin: 0;
+    background-color: #CCCCCC;
+    z-index: 99;
+}
+
+h2.blog-post-title,
+.no-margin-bottom {
+    margin-bottom: 0;
+}
+
+p {
+    font-family: 'Crimson Text', serif;
+}
+
+p.blog-post-meta,
+.no-margin-top {
+    margin-top: 0;
+}
+
+a.flat {
+    text-decoration: none;
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+}
+
+hr.header {
+    margin: 0;
+    border: 1px solid #522C1B;
+}
+
+.tufts-blue {
+    color: #3E8EDE;
+}
+
+.tufts-brown {
+    color: #522C1B;
+}
+
+.blue {
+    color: #346094;
+}
+
+.orange {
+    color: #D35E13;
+}
+
+.red {
+    color: #A93439;
+}
+
+.green {
+    color: #77881C;
+}
+
+.violet {
+    color: #4A0D66;
+}
+
+.grey {
+    color: #646569;
+}
+
+.grey_alt {
+    color: #7C6755;
+}

@@ -18,47 +18,54 @@
 </head>
 
 <body>
-    <div class="masthead">
-        <div class="container">
-            <div class="container">
-                <div class="header-left blog-title">
-                    <?php
-                    $blog_title = get_bloginfo('name');
-                    switch ($blog_title):
-                        case "InSight":?>
-    <a class="flat tufts-brown" href="<?php bloginfo('wpurl');?>">IN</a><a class="tufts-blue flat" href="<?php bloginfo('wpurl') ?>">SIGHT</a>
-                            <?php
-                            break;
-                        default:?>
-    <a class="flat" href="<?php bloginfo('wpurl');?>"><?php get_bloginfo('name');?></a>
-                            <?php
-                            break;
-                    endswitch;
-                    ?>
-                </div>
-                <div class="header-right blog-description">
-                    <?php
-                    $blog_desc = get_bloginfo('description');
-                    switch ($blog_desc):
-                        case "InSightDefault":?>
-                            <span class="tufts-brown">Tufts University</span>
-                            <span class="tufts-blue">Sackler School</span><br />
-                            <span class="tufts-brown">Graduate Student Council</span><br />
-                            <span class="tufts-blue">Newsletter</span>
-                            <span class="tufts-brown">&</span>
-                            <span class="tufts-blue">Blog</span>
-                            <?php
-                            break;
-                        default:
-                            echo get_bloginfo('description');
-                            break;
-                    endswitch;
-                    ?>
-                </div>
-            </div><!-- /.container -->
-            <hr class="header tufts-brown">
-        </div><!-- /.container -->
-    </div><!-- /.masthead -->
+    <div class="handle fixed left bg-white">
+        <div class="blog-title center">
+            <?php
+            $blog_title = get_bloginfo('name');
+            switch ($blog_title):
+                case "InSight":?>
+            <a class="flat tufts-brown" href="<?php bloginfo('wpurl');?>">IN</a><a class="tufts-blue flat" href="<?php bloginfo('wpurl') ?>">SIGHT</a>
+                <?php
+                break;
+            default:?>
+            <a class="flat" href="<?php bloginfo('wpurl');?>"><?php get_bloginfo('name');?></a>
+                <?php
+                break;
+            endswitch;
+            ?>
+        </div>
+        <div class="center">
+            <?php
+            $blog_desc = get_bloginfo('description');
+            switch ($blog_desc):
+                case htmlentities("Tufts University Sackler School Graduate Student Council Newsletter & Blog"):?>
+            <span class="tufts-brown">Tufts University</span>
+            <span class="tufts-blue">Sackler School</span><br />
+            <span class="tufts-brown">Graduate Student Council</span><br />
+            <span class="tufts-blue">Newsletter</span>
+            <span class="tufts-brown">&</span>
+            <span class="tufts-blue">Blog</span>
+                    <?php break;
+                default:
+                    echo get_bloginfo('description');
+                    break;
+            endswitch; ?>
+        </div>
+        <div class="handle-nav">
+            Menu
+            <div class="handle-child">
+                <?php wp_list_pages('&title_li=');?>
+            </div>
+        </div>
+        <div>
+            Search
+        </div>
+        <div>
+            Archives
+        </div>
+    </div>
+    <div class="container">
+    </div><!-- /.container -->
     
     <div class="container">
         <div class="header">

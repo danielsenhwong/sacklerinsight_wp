@@ -22,17 +22,11 @@ div.sidebar {
 div.header-left {
     margin: 0 15px 0 0;
     display: inline-block;
-    font-size: 460%;
 }
 
 div.header-right {
     margin: 0;
     display: inline-block;
-    font-size: 100%;
-}
-
-div.content {
-    display: table;
 }
 
 div.main {
@@ -94,6 +88,10 @@ hr.header {
     border: 1px solid #522C1B;
 }
 
+.blog-title {
+    font-size: 300%;
+}
+
 .fixed {
     position: fixed;
 }
@@ -102,15 +100,18 @@ hr.header {
     text-align: left;
 }
 
+.center {
+    text-align: center;
+}
+
 .handle {
-    background-color: red;
-    top: 0;
     width: 300px;
+    height: 100%;
     left: 0;
 }
 
-.handle-title {
-    font-size: 200%;
+.container {
+    margin-left: 300px;
 }
 
 .tufts-blue {
@@ -147,4 +148,23 @@ hr.header {
 
 .grey_alt {
     color: #7C6755;
+}
+
+.bg-white {
+    background-color: #FFFFFF;
+}
+
+div.handle-nav:hover .child {
+    display: block;
+    background-color: #FFFFFF;
+    z-index: 99;
+}
+
+div.child {
+    position: absolute;
+    display: none;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    z-index: 99;
 }

@@ -7,6 +7,7 @@ GitHub repository uses the GitHub WordPress .gitignore file, so among other file
 Sackler InSight WP theme is located in wp-content/themes/sacklerinsight/.
 
 ## Meeting notes
+### 31 Jan 2017
 - Hold one sidebar fixed, content scrolls in remaining space.
   - INSIGHT logo
   - Menu w/ hamburger

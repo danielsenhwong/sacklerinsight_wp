@@ -35,6 +35,10 @@ div.content {
     display: table;
 }
 
+div.main {
+    max-width: 800px;
+}
+
 div.nav li {
     position: relative;
     display: inline-block;
@@ -57,6 +61,7 @@ ul.children {
     position: absolute;
     display: none;
     margin: 0;
+    padding: 0;
     background-color: #CCCCCC;
     z-index: 99;
 }
@@ -73,6 +78,7 @@ p {
 p.blog-post-meta,
 .no-margin-top {
     margin-top: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 a.flat {
@@ -86,6 +92,25 @@ a:-webkit-any-link {
 hr.header {
     margin: 0;
     border: 1px solid #522C1B;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.left {
+    text-align: left;
+}
+
+.handle {
+    background-color: red;
+    top: 0;
+    width: 300px;
+    left: 0;
+}
+
+.handle-title {
+    font-size: 200%;
 }
 
 .tufts-blue {

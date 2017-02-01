@@ -8,7 +8,8 @@
         endwhile; endif;
         ?>
     </div><!-- /.main -->
-    <?php get_sidebar();?>
+    <?php # 18 Jan 2017 Ignore sidebar for now. Need better style. ?>
+    <?php #get_sidebar();?>
 </div><!-- /.content -->
         
 <?php get_footer();?>

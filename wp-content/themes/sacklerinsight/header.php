@@ -52,7 +52,7 @@
             endswitch; ?>
         </div>
         <div class="handle-nav">
-            Menu
+            <span class="menu">Menu</span>
             <div class="handle-child">
                 <?php wp_list_pages('&title_li=');?>
             </div>

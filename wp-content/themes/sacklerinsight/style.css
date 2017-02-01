@@ -168,3 +168,7 @@ div.child {
     background-color: #FFFFFF;
     z-index: 99;
 }
+
+.menu::before {
+    content: '☰ ';
+}

@@ -61,6 +61,8 @@
                 <div>
                     <a href="<?php echo admin_url();?>">Admin</a>
                 </div>
+	    </div>
+	    <div>
                 <div style="margin-top: 10px;">
                     Tag Cloud<br/>
                 </div>

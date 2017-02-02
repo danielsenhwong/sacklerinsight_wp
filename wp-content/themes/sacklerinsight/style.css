@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*
  * Theme Name: Sackler InSight
  * Author: Daniel Wong
@@ -6,7 +8,10 @@
  * Version: 0.0.1
  */
 
-body {
+/* Main body and containers */
+body,
+input.search-field,
+input.search-submit {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -19,25 +24,167 @@ div.sidebar {
     display: table-cell;
 }
 
-div.header-left {
-    margin: 0 15px 0 0;
-    display: inline-block;
+
+
+/* For mobile phones */
+body {
+    width: 100%
 }
 
-div.header-right {
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+img.attachment-thumbnail {
+    float: none;
+}
+
+div.grab-handle {
+    height: 21px;
+    top: intial;
+    background-color: #FFFFFF;
+    width: 100%;
+    padding-bottom: 4px;
+}
+
+div.grab-handle:hover ~ #handle,
+#handle:hover {
+    display: block;
+    background-color: #FFFFFF;
+}
+
+div#handle {
+    display: none;
+    left: 0;
+    top: initial;
+    height: 100%;
+    width: 60%;
+}
+
+div.container,
+div.container div,
+div.main,
+div.content {
+    max-width: 100%;
+}
+
+div.header {
+    padding-top: 25px;
+}
+
+#menu-icon {
+    content: ' ☰ ';
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop */
+    body {
+        width: 800px;
+    }
+
+    div.header {
+        padding: 0;
+    }
+
+    /* Make sure images aren't too big */
+    /* Constrain and resize proportionally */
+    img {
+        max-width: 575px;
+	height: auto;
+    }
+
+    img.attachment-thumbnail {
+        float: right;
+    }
+
+    div.grab-handle {
+        display: none;
+    }
+
+    div#handle,
+    div#handle:hover {
+        display: block;
+        width: 225px;
+        height: 100%;
+        left: 0;
+        top: initial;
+        overflow-y: auto;
+    }
+
+    div.container {
+        margin-left: 225px;
+    }
+
+    /* Blog posts with oversized images will make a big div, so stop that */
+    div.container,
+    div.container div,
+    div.main {
+	max-width: 575px;
+    }
+
+    div.content {
+        display: table;
+        max-width: 575px;
+    }
+}
+/* End main body and containers */
+
+/* Menu */
+div.nav div:not(.submenu) {
+    padding: 4px 8px;
+}
+
+div.nav div:hover:not(.tag-cloud),
+div.nav div.tag-cloud a:hover,
+div.nav li:hover,
+div.nav li a:hover {
+    background-color: #3E8EDE;
+    color: #FFFFFF;
+}
+
+div.menu:hover div.submenu {
+    display: block;
+    background-color: #BBBBBB;
+    z-index: 99;
+}
+
+div.submenu {
+    position: absolute;
+    display: none;
     margin: 0;
-    display: inline-block;
+    padding-top: 4px;
+    background-color: #BBBBBB;
+    z-index: 99;
 }
 
-div.main {
-    max-width: 800px;
+div.submenu li:hover {
+    background-color: #3E8EDE;
+    color: #FFFFFF;
+}
+
+/* No hamburger */
+div.nav div:not(.menu):not(.submenu) {
+    padding-left: 27px;
+}
+
+/* With hamburger */
+div.menu::before,
+div.nav li.page_item_has_children::before,
+div.grab-handle::before {
+    content: ' ☰ ';
+}
+/* End Menu */
+
+/* Navigation list */
+div.fixed {
+    position: fixed;
 }
 
 div.nav li {
     position: relative;
-    display: inline-block;
-    padding: 10px;
-    margin: 0;
+    display: block;
+    padding: 5px 10px;
 }
 
 div.nav li a {
@@ -47,7 +194,7 @@ div.nav li a {
 
 div.nav li.page_item_has_children:hover .children {
     display: block;
-    background-color: #CCCCCC;
+    background-color: #999999;
     z-index: 99;
 }
 
@@ -55,12 +202,33 @@ ul.children {
     position: absolute;
     display: none;
     margin: 0;
-    padding: 0;
-    background-color: #CCCCCC;
+    padding: 5px 0px 0px 0px;
+    background-color: #999999;
     z-index: 99;
 }
+/* End Navigation List */
 
-h2.blog-post-title,
+/* Content containers */
+div.border-right {
+    border-right: 1px solid #000000;
+}
+
+div.border-bottom {
+    border-bottom: 1px solid #000000;
+}
+
+div.blog-post {
+    border-bottom: 1px solid #000000;
+    padding-bottom: 0.83em;
+    margin-bottom: 0.83em;
+}
+/* End content containers */
+
+/* Text and font formatting */
+h2.blog-post-title {
+    margin: 0;
+}
+
 .no-margin-bottom {
     margin-bottom: 0;
 }
@@ -75,45 +243,62 @@ p.blog-post-meta,
     font-family: 'Montserrat', sans-serif;
 }
 
-a.flat {
+a:link {
+    color: #000000;
     text-decoration: none;
 }
 
-a:-webkit-any-link {
-    text-decoration: none;
+div.main a:visited:not(:hover) {
+    color: #666666;
 }
 
+div.nav div a:link,
+div.nav div a:visited:not(:hover) {
+    color: #000000;
+}
+
+div.nav div:hover:not(.menu):not(.submenu):not(.tag-cloud) a {
+    color: #FFFFFF;
+}
+
+a:hover {
+    color: #3E8EDE;
+}
 hr.header {
     margin: 0;
     border: 1px solid #522C1B;
 }
 
 .blog-title {
-    font-size: 300%;
+    font-size: 250%;
 }
 
-.fixed {
-    position: fixed;
+.blog-desc {
+    font-size: 90%;
 }
 
 .left {
     text-align: left;
 }
 
+.right {
+    text-align: right;
+}
+
 .center {
     text-align: center;
 }
 
-.handle {
-    width: 300px;
-    height: 100%;
-    left: 0;
+.table-row {
+    display: table-row;
 }
 
-.container {
-    margin-left: 300px;
+.table-cell {
+    display: table-cell;
 }
+/* End text and font formatting */
 
+/* Commonly-used colors */
 .tufts-blue {
     color: #3E8EDE;
 }
@@ -142,11 +327,11 @@ hr.header {
     color: #4A0D66;
 }
 
-.grey {
+.gray {
     color: #646569;
 }
 
-.grey_alt {
+.gray_alt {
     color: #7C6755;
 }
 
@@ -154,21 +339,7 @@ hr.header {
     background-color: #FFFFFF;
 }
 
-div.handle-nav:hover .child {
-    display: block;
-    background-color: #FFFFFF;
-    z-index: 99;
+.bg-lt-gray {
+    background-color: #DDDDDD;
 }
-
-div.child {
-    position: absolute;
-    display: none;
-    margin: 0;
-    padding: 0;
-    background-color: #FFFFFF;
-    z-index: 99;
-}
-
-.menu::before {
-    content: '☰ ';
-}
+/* End commonly-used colors */

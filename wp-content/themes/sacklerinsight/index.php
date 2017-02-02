@@ -5,11 +5,12 @@
         <?php
         if (have_posts()): while (have_posts()) : the_post();
             get_template_part('content', get_post_format());
-        endwhile; endif;
+        endwhile;?>
+        <div><?php next_posts_link( 'Older posts' ); ?></div>
+        <div><?php previous_posts_link( 'Newer posts' ); ?></div>
+        <?php endif;
         ?>
     </div><!-- /.main -->
-    <?php # 18 Jan 2017 Ignore sidebar for now. Need better style. ?>
-    <?php #get_sidebar();?>
 </div><!-- /.content -->
         
 <?php get_footer();?>

@@ -181,7 +181,8 @@ div.nav div:not(.submenu) {
 div.nav div:hover,
 div.tag-cloud a:hover,
 div.nav li:hover,
-div.nav li.page_item a:hover {
+div.nav li.page_item a:hover,
+div.mobile-home a:hover {
     /* Hovering over a Nav child div, a tag cloud link, a nav list item, or a nav list item link makes it highlighted */
     background-color: #3E8EDE;
     color: #FFFFFF;
@@ -210,6 +211,10 @@ div.nav div:not(.menu):not(.submenu):not(.mobile-home) {
     padding-left: 27px;
 }
 
+div.nav div.mobile-home {
+    padding-left: 3px;	
+}
+
 div.menu::before,
 div.nav li.page_item_has_children::before,
 div.grab-handle::before,
@@ -220,7 +225,7 @@ div.grab-handle::before,
 
 #home-icon,
 div.mobile-home::before {
-    content: '  ⌂ ';
+    content: ' ⌂ ';
 }
 /* End Menu */
 

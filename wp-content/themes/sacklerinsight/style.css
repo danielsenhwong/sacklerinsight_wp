@@ -142,8 +142,7 @@ div.nav div:not(.submenu) {
 
 div.nav div:hover:not(.tag-cloud),
 div.nav div.tag-cloud a:hover,
-div.nav li:hover,
-div.nav li a:hover {
+div.nav li:hover {
     background-color: #3E8EDE;
     color: #FFFFFF;
 }
@@ -152,6 +151,7 @@ div.menu:hover div.submenu {
     display: block;
     background-color: #BBBBBB;
     z-index: 99;
+    color: #000000;
 }
 
 div.submenu {

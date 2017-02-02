@@ -61,10 +61,10 @@ div.header {
 div.grab-handle {
     /* Show the handle to grab */
     height: 49px;
-    top: intial;
+    top: initial;
     background-color: #FFFFFF;
     width: 100%;
-    padding-bottom: 6px;
+    z-index: 99;
 }
 
 div.grab-handle:hover ~ #handle,
@@ -82,6 +82,7 @@ div#handle {
     height: 100%;
     width: 60%;
     max-width: 225px;
+    min-width: 100px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -215,6 +216,10 @@ div.grab-handle::before,
 #menu-icon {
     /* With hamburger */
     content: ' ☰ ';
+}
+
+#home-icon {
+    content: ' ⌂ ';
 }
 /* End Menu */
 

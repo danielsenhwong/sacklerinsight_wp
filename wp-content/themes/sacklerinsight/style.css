@@ -182,7 +182,8 @@ div.nav div:hover,
 div.tag-cloud a:hover,
 div.nav li:hover,
 div.nav li.page_item a:hover,
-div.mobile-home a:hover {
+div.mobile-home a:hover,
+div.submenu a:hover {
     /* Hovering over a Nav child div, a tag cloud link, a nav list item, or a nav list item link makes it highlighted */
     background-color: #3E8EDE;
     color: #FFFFFF;

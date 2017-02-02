@@ -46,3 +46,4 @@ Sackler InSight WP theme is located in wp-content/themes/sacklerinsight/.
 - Mobile-Responsive CSS Navigation Menu http://blog.teamtreehouse.com/create-an-absolute-basic-mobile-css-responsive-navigation-menu
 - Responsive Web Design http://www.w3schools.com/css/css_rwd_mediaqueries.asp
 - CSS Media Queries https://www.smashingmagazine.com/2010/07/how-to-use-css3-media-queries-to-create-a-mobile-version-of-your-website/
+- Make WordPress CSS changes live immediately https://kellenmace.com/force-css-changes-to-go-live-immediately/

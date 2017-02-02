@@ -55,16 +55,16 @@ div.content {
 
 div.header {
     /* This should be the height of div.grab-handle + padding */
-    padding-top: 25px;
+    padding-top: 55px;
 }
 
 div.grab-handle {
     /* Show the handle to grab */
-    height: 21px;
+    height: 49px;
     top: intial;
     background-color: #FFFFFF;
     width: 100%;
-    padding-bottom: 4px;
+    padding-bottom: 6px;
 }
 
 div.grab-handle:hover ~ #handle,

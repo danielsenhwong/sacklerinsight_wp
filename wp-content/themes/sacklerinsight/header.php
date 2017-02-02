@@ -24,7 +24,7 @@
 
 <body>
     <div class="fixed grab-handle blog-title border-bottom">
-        <a href="#" id=menu-icon></a><a href="#" class="tufts-bown">In</a><a href="#" class="tufts-blue">Sight</a> Menu
+        <a href="#" id=menu-icon></a><a href="#" class="tufts-bown">IN</a><a href="#" class="tufts-blue">SIGHT</a> Menu
     </div>
         <div id="handle" class="fixed left border-right">
             <div class="blog-title center">

@@ -3,6 +3,8 @@ A WordPress-based blog for the Sackler InSight newsletter with a WP theme based 
 
 The code basis for this theme is from Tania Rascia's blog post tutorial series on developing a WordPress theme from scratch: https://www.taniarascia.com/developing-a-wordpress-theme-from-scratch/ Additional Resources are listed at the end of this Readme file.
 
+While this repository contains an entire WordPress installation, all of the changes are actually only occurring in files inside the `wp-content/themes/sacklerinsight` folder.
+
 ## Notes
 GitHub repository uses the GitHub WordPress .gitignore file, so among other files, wp_config.php is not tracked. This is for security reasons, as this file contains the database settings, password, and site-specific security keys. This file will need to be re-generated when deployed.
 

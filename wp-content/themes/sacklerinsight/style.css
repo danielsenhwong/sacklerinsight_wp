@@ -264,7 +264,7 @@ p.blog-post-meta,
     font-family: 'Montserrat', sans-serif;
 }
 
-a:link:not(.tufts-brown):not(.tufts-blue) {
+a:link:not(.tufts-brown):not(.tufts-blue):not(:hover) {
     color: #000000;
 }
 
@@ -277,7 +277,8 @@ div.main a:visited:not(:hover) {
 }
 
 div.nav div a:link:not(:hover),
-div.nav div a:visited:not(:hover) {
+div.nav div a:visited:not(:hover),
+div.submenu div a:visited:not(:hover) {
     color: #000000;
 }
 

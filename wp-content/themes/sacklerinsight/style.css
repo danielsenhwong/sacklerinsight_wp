@@ -212,7 +212,7 @@ div.nav div:not(.menu):not(.submenu):not(.mobile-home) {
 }
 
 div.nav div.mobile-home {
-    padding-left: 3px;	
+    padding-left: 13px;	
 }
 
 div.menu::before,

@@ -46,7 +46,7 @@
                 <div>
                     <?php get_search_form(); ?>
                 </div>
-                <div class="menu mobile-home">
+                <div class="mobile-home">
 		    <a href="/">Home</a>
 		</div>
 		<div class="menu">

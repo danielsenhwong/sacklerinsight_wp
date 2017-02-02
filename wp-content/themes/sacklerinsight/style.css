@@ -205,7 +205,7 @@ div.submenu {
 }
 
 
-div.nav div:not(.menu):not(.submenu) {
+div.nav div:not(.menu):not(.submenu):not(.mobile-home) {
     /* No hamburger */
     padding-left: 27px;
 }
@@ -220,7 +220,7 @@ div.grab-handle::before,
 
 #home-icon,
 div.mobile-home::before {
-    content: ' ⌂ ';
+    content: '  ⌂ ';
 }
 /* End Menu */
 

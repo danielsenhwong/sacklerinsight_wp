@@ -46,7 +46,10 @@
                 <div>
                     <?php get_search_form(); ?>
                 </div>
-                <div class="menu">
+                <div class="mobile-home">
+		            <a href="/">Home</a>
+		        </div>
+		        <div class="menu">
                     Menu
 	            <div class="submenu">
                         <?php wp_list_pages('&title_li=');?>

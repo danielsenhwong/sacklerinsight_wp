@@ -24,8 +24,9 @@ div.sidebar {
     display: table-cell;
 }
 
-
-
+/* For responsive deisgn, use media queries to distinguish by screen size */
+/* Design for mobile phone viewing first, larger screens will be an override. */
+/* Print can be another override on top of that. */
 /* For mobile phones */
 body {
     width: 100%;
@@ -38,33 +39,11 @@ img {
 }
 
 img.attachment-thumbnail {
+    /* This is default behavior, but be explicit to reset */
     float: none;
 }
 
-div.grab-handle {
-    height: 21px;
-    top: intial;
-    background-color: #FFFFFF;
-    width: 100%;
-    padding-bottom: 4px;
-}
-
-div.grab-handle:hover ~ #handle,
-#handle:hover {
-    display: block;
-    background-color: #FFFFFF;
-}
-
-div#handle {
-    display: none;
-    left: 0;
-    top: initial;
-    height: 100%;
-    width: 60%;
-}
-
 div.container,
-div.container div,
 div.main,
 div.content {
     max-width: 100%;
@@ -75,21 +54,40 @@ div.content {
 }
 
 div.header {
+    /* This should be the height of div.grab-handle + padding */
     padding-top: 25px;
 }
 
-#menu-icon {
-    content: ' ☰ ';
+div.grab-handle {
+    /* Show the handle to grab */
+    height: 21px;
+    top: intial;
+    background-color: #FFFFFF;
+    width: 100%;
+    padding-bottom: 4px;
+}
+
+div.grab-handle:hover ~ #handle,
+#handle:hover {
+    /* Mouse over to grab handle or work with handle makes handle visible */
+    display: block;
+    background-color: #FFFFFF;
+}
+
+div#handle {
+    /* Side handle for content containers */
+    display: none;
+    left: 0;
+    top: initial;
+    height: 100%;
+    width: 60%;
+    max-width: 225px;
 }
 
 @media only screen and (min-width: 768px) {
     /* For desktop */
     body {
         width: 800px;
-    }
-
-    div.header {
-        padding: 0;
     }
 
     /* Make sure images aren't too big */
@@ -103,7 +101,12 @@ div.header {
         float: right;
     }
 
+    div.header {
+        padding: 0;
+    }
+	
     div.grab-handle {
+	/* No need for grab handle with larger screen */
         display: none;
     }
 
@@ -134,52 +137,6 @@ div.header {
     }
 }
 /* End main body and containers */
-
-/* Menu */
-div.nav div:not(.submenu) {
-    padding: 4px 8px;
-}
-
-div.nav div:hover:not(.tag-cloud),
-div.nav div.tag-cloud a:hover,
-div.nav li:hover {
-    background-color: #3E8EDE;
-    color: #FFFFFF;
-}
-
-div.menu:hover div.submenu {
-    display: block;
-    background-color: #BBBBBB;
-    z-index: 99;
-    color: #000000;
-}
-
-div.submenu {
-    position: absolute;
-    display: none;
-    margin: 0;
-    padding-top: 4px;
-    background-color: #BBBBBB;
-    z-index: 99;
-}
-
-div.submenu li:hover {
-    background-color: #3E8EDE;
-    color: #FFFFFF;
-}
-
-/* No hamburger */
-div.nav div:not(.menu):not(.submenu) {
-    padding-left: 27px;
-}
-
-/* With hamburger */
-div.menu::before,
-div.nav li.page_item_has_children::before,
-div.grab-handle::before {
-    content: ' ☰ ';
-}
-/* End Menu */
 
 /* Navigation list */
 div.fixed {
@@ -213,6 +170,53 @@ ul.children {
     z-index: 99;
 }
 /* End Navigation List */
+
+/* Menu */
+div.nav div:not(.submenu) {
+    /* Don't pad the submenus */
+    padding: 4px 8px;
+}
+
+div.nav div:hover,
+div.tag-cloud a:hover,
+div.nav li:hover,
+div.nav li:hover a {
+    /* Hovering over a Nav child div, a tag cloud link, a nav list item, or a nav list item link makes it highlighted */
+    background-color: #3E8EDE;
+    color: #FFFFFF;
+}
+
+div.menu:hover div.submenu {
+    /* Hovering over the menu div makes the submenu appear on top of everything */
+    display: block;
+    background-color: #BBBBBB;
+    z-index: 99;
+    color: #000000;
+}
+
+div.submenu {
+    /* Submenu divs are invisible until the menu is hovered */
+    position: absolute;
+    display: none;
+    margin: 0;
+    padding-top: 4px;
+    background-color: #BBBBBB;
+}
+
+
+div.nav div:not(.menu):not(.submenu) {
+    /* No hamburger */
+    padding-left: 27px;
+}
+
+div.menu::before,
+div.nav li.page_item_has_children::before,
+div.grab-handle::before,
+#menu-icon {
+    /* With hamburger */
+    content: ' ☰ ';
+}
+/* End Menu */
 
 /* Content containers */
 div.border-right {
@@ -266,10 +270,10 @@ div.nav div a:visited:not(:hover) {
     color: #000000;
 }
 
-div.nav div:hover:not(.menu):not(.submenu):not(.tag-cloud) a,
+/*div.nav div:hover:not(.menu):not(.submenu):not(.tag-cloud) a,
 div.menu li:hover a:link {
     color: #FFFFFF;
-}
+}*/
 
 a:hover {
     color: #3E8EDE;

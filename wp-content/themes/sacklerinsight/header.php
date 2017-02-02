@@ -24,7 +24,7 @@
 
 <body>
     <div class="fixed grab-handle blog-title border-bottom">
-        <span id=menu-icon></span><span class="tufts-bown">IN</span><span class="tufts-blue">SIGHT</span>
+        <span id=menu-icon></span><span class="tufts-brown">IN</span><span class="tufts-blue">SIGHT</span>
     </div>
         <div id="handle" class="fixed left border-right">
             <div class="blog-title center">

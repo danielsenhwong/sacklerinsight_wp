@@ -275,9 +275,10 @@ div.menu li:hover a:link {
     color: #FFFFFF;
 }*/
 
-a:hover {
+/*a:hover {
     color: #3E8EDE;
-}
+}*/
+
 hr.header {
     margin: 0;
     border: 1px solid #522C1B;

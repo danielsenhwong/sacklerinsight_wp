@@ -179,8 +179,7 @@ div.nav div:not(.submenu) {
 
 div.nav div:hover,
 div.tag-cloud a:hover,
-div.nav li:hover,
-div.nav li:hover a {
+div.nav li:hover {
     /* Hovering over a Nav child div, a tag cloud link, a nav list item, or a nav list item link makes it highlighted */
     background-color: #3E8EDE;
     color: #FFFFFF;

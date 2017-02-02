@@ -277,7 +277,7 @@ div.main a:visited:not(:hover) {
 }
 
 div.main a:hover {
-    color: 3E8EDE;
+    color: #3E8EDE;
 }
 
 div.nav div a:link:not(:hover),

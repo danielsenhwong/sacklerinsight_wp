@@ -183,7 +183,7 @@ div.tag-cloud a:hover,
 div.nav li:hover,
 div.nav li.page_item a:hover,
 div.mobile-home a:hover,
-div.submenu a:hover {
+div.nav div a:hover {
     /* Hovering over a Nav child div, a tag cloud link, a nav list item, or a nav list item link makes it highlighted */
     background-color: #3E8EDE;
     color: #FFFFFF;
@@ -205,7 +205,6 @@ div.submenu {
     padding-top: 4px;
     background-color: #BBBBBB;
 }
-
 
 div.nav div:not(.menu):not(.submenu):not(.mobile-home) {
     /* No hamburger */
@@ -275,6 +274,10 @@ a:link {
 
 div.main a:visited:not(:hover) {
     color: #666666;
+}
+
+div.main a:hover {
+    color: 3E8EDE;
 }
 
 div.nav div a:link:not(:hover),

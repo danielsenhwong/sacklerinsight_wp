@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <div class="fixed grab-handle border-bottom">
+    <div class="fixed grab-handle blog-title border-bottom">
         <a href="#" id=menu-icon></a><a href="#" class="tufts-bown">In</a><a href="#" class="tufts-blue">Sight</a> Menu
     </div>
         <div id="handle" class="fixed left border-right">

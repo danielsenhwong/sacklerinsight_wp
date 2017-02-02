@@ -28,7 +28,8 @@ div.sidebar {
 
 /* For mobile phones */
 body {
-    width: 100%
+    width: 100%;
+    margin: 0;
 }
 
 img {
@@ -67,6 +68,10 @@ div.container div,
 div.main,
 div.content {
     max-width: 100%;
+}
+
+div.content {
+    margin: 8px;
 }
 
 div.header {
@@ -185,6 +190,7 @@ div.nav li {
     position: relative;
     display: block;
     padding: 5px 10px;
+    color: #000000;
 }
 
 div.nav li a {
@@ -243,8 +249,11 @@ p.blog-post-meta,
     font-family: 'Montserrat', sans-serif;
 }
 
-a:link {
+a:link:not(.tufts-brown):not(.tufts-blue) {
     color: #000000;
+}
+
+a:link {
     text-decoration: none;
 }
 
@@ -252,12 +261,13 @@ div.main a:visited:not(:hover) {
     color: #666666;
 }
 
-div.nav div a:link,
+div.nav div a:link:not(:hover),
 div.nav div a:visited:not(:hover) {
     color: #000000;
 }
 
-div.nav div:hover:not(.menu):not(.submenu):not(.tag-cloud) a {
+div.nav div:hover:not(.menu):not(.submenu):not(.tag-cloud) a,
+div.menu li:hover a:link {
     color: #FFFFFF;
 }
 

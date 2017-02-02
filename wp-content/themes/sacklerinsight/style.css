@@ -218,7 +218,8 @@ div.grab-handle::before,
     content: ' ☰ ';
 }
 
-#home-icon {
+#home-icon,
+div.mobile-home::before {
     content: ' ⌂ ';
 }
 /* End Menu */

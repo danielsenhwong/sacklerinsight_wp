@@ -34,6 +34,12 @@ Sackler InSight WP theme is located in wp-content/themes/sacklerinsight/.
 - Aim for launch Fall 2017, use interim time to work out kinks, establish SOPs for writing, website management.
 
 ## Changes
+### 14 Oct 2017
+- Initialized project
+- Google Fonts and CSS styling used to re-create InSight PDF design. Fonts: Gotham -> Montserrat, Minion -> Crimson Text
+- Existing blog content migrated from sites.tufts.edu using WordPress' built-in export/import tool.
+  - User accounts migrated, but passwords are unknown. Users must manually re-set.
+
 ### 1 Feb 2017
 - Fixed left navigation panel design implemented
   - Issues with CSS styling of menu item text color
@@ -42,6 +48,9 @@ Sackler InSight WP theme is located in wp-content/themes/sacklerinsight/.
 - Rudimentary features implemented:
   - Search (needs more polish)
   - Comments (also needs more polish, styling)
+- Imported Nov 2016 & Dec 2016 content from sites.tufts.edu
+  - Duplicate content is automatically omitted on import, so no issues there.
+- Need to split navigation side panel ('handle' child div) from sidebar content.
 
 ## Resources
 - Developing a WordPress Theme https://www.taniarascia.com/developing-a-wordpress-theme-from-scratch/

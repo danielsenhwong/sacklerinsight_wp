@@ -7,6 +7,13 @@
             <?php get_template_part( 'template-parts/content-featured' ); ?>
         </div>
         <?php endif; ?>
+        <?php $recent_posts = wp_get_recent_posts( array('numberposts' => 6, 'post_type' => 'post', 'post_status' => 'publish') );
+        foreach ( $recent_posts as $recent ) { ?>
+            <div class="recent-content">
+                <?php echo $recent["post_title"] ?> 
+            </div>
+        <?php } ?>
+        
         <?php
         if (have_posts()): while (have_posts()) : the_post();
             get_template_part('content', get_post_format());

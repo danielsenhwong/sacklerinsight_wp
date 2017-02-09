@@ -4,7 +4,7 @@
     <div class="main">
         <?php if (insight_has_featured_posts(1)) : ?>
         <div class="featured-content">
-            <?php get_template_part( 'content-featured' ); ?>
+            <?php get_template_part( 'template-parts/content-featured' ); ?>
         </div>
         <?php endif; ?>
         <?php

@@ -92,9 +92,10 @@ div#handle {
 
     /* Make sure images aren't too big */
     /* Constrain and resize proportionally */
+	/* Blog posts with oversized images will make a big div, so stop that */
     img {
-        max-width: 575px;
-	height: auto;
+        max-width: 799px;
+		height: auto;
     }
 
     img.attachment-thumbnail {
@@ -124,16 +125,15 @@ div#handle {
         margin-left: 225px;
     }
 
-    /* Blog posts with oversized images will make a big div, so stop that */
     div.container,
     div.container div,
     div.main {
-	max-width: 575px;
+	max-width: 100%;
     }
 
-    div.content {
+    div.content {	
         display: table;
-        max-width: 575px;
+        max-width: 100%;
     }
 }
 /* End main body and containers */

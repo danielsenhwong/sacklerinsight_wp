@@ -52,5 +52,4 @@ function insight_has_featured_posts() {
     
     return true;
 }
-}
 ?>

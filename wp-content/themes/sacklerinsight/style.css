@@ -87,7 +87,7 @@ div#handle {
 @media only screen and (min-width: 768px) {
     /* For desktop */
     body {
-        width: 800px;
+        width: 1024px;
     }
 
     /* Make sure images aren't too big */

@@ -7,16 +7,15 @@
             <?php get_template_part( 'template-parts/content-featured' ); ?>
         </div>
         <?php endif; ?>
-        <?php $recent_posts = wp_get_recent_posts( array('numberposts' => 6, 'post_type' => 'post', 'post_status' => 'publish') );
-        foreach ( $recent_posts as $recent ) { ?>
-            <div class="recent-content">
-                <?php echo $recent["post_title"] ?> 
-            </div>
-        <?php } ?>
-        
+       
         <?php
+        $post_counter = 0;
         if (have_posts()): while (have_posts()) : the_post();
-            get_template_part('content', get_post_format());
+            $post_counter += 1;
+            if ($post_counter <= 6):
+                get_template_part('template-parts/content-recent', get_post_format());
+            else:
+                get_template_part('content', get_post_format());
         endwhile;?>
         <div><?php next_posts_link( 'Older posts' ); ?></div>
         <div><?php previous_posts_link( 'Newer posts' ); ?></div>

@@ -26,4 +26,31 @@ function new_excerpt_more($more) {
         return ' [...]<br /><br /><a class="moretag" href="'. get_permalink($post->ID) . '">&raquo; Read the full article...</a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+// WordPress Featured Content
+add_theme_support( 'featured-content', array(
+    'filter'     => 'insight_get_featured_posts',
+    'max_posts'  => 6,
+) );
+
+function insight_get_featured_posts() {
+    return apply_filters( 'insight_get_featured_psots', array() );
+}
+
+function insight_has_featured_posts() {
+    if ( is_paged() )
+        return false;
+    
+    $minimum = absint( $minimum );
+    $featured_psots = apply_filters( 'insight_get_featured_posts', array() );
+    
+    if ( ! is_array( $featured_posts ) )
+        return false;
+    
+    if ( $minimum > count( $featured_posts ) )
+        return false;
+    
+    return true;
+}
+}
 ?>

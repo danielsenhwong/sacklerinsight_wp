@@ -88,6 +88,7 @@ div#handle {
     /* For desktop */
     body {
         width: 1024px;
+	max-width: 100%;
     }
 
     /* Make sure images aren't too big */
@@ -95,7 +96,7 @@ div#handle {
 	/* Blog posts with oversized images will make a big div, so stop that */
     img {
         max-width: 799px;
-		height: auto;
+	height: auto;
     }
 
     img.attachment-thumbnail {

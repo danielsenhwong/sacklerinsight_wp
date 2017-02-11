@@ -128,14 +128,14 @@ div#handle {
     div.container,
     div.container div,
     div.main {
-	width: 100%;
-	max-width: 799px;
+	max-width: 100%;
+	width: 799px;
     }
 
     div.content {	
         display: table;
-	width: 100%;
-        max-width: 799px;
+	max-width: 100%;
+        width: 799px;
     }
 }
 /* End main body and containers */
